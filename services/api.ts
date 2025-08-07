@@ -7,7 +7,7 @@ export const TMB_CONFIG = {
     }
 }
 
-export const fetchMovies = async ({ query }: { query?: string}) => {
+export const fetchMovies = async ({ query }: { query: string}) => {
     const endpoint = query ?
     `${TMB_CONFIG.BASE_URL}/search/movie?query=${encodeURIComponent(query)}` :
     `${TMB_CONFIG.BASE_URL}/discover/movie?sort_by=popularity.desc`;
@@ -22,5 +22,5 @@ export const fetchMovies = async ({ query }: { query?: string}) => {
 
     const data = await response.json();
 
-    return data.results as Movie[];
+    return data.results;
 }
