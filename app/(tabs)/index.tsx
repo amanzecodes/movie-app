@@ -2,7 +2,7 @@ import SearchBar from "@/components/SearchBar";
 import { icons } from "@/constants/icons";
 import { images } from "@/constants/images";
 import { useRouter } from "expo-router";
-import { Text, View, Image, ScrollView } from "react-native";
+import { View, Image, ScrollView } from "react-native";
 
 
 export default function Index() {
